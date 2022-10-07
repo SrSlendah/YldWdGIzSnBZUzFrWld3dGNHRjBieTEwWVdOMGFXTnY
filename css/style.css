@@ -53,7 +53,8 @@ a {
 }
 
 img {
-    width: 30%
+    width: 30%;
+    height: 300%
 }
 
 /* Ir arriba */
@@ -232,6 +233,7 @@ main .en-esta-web {
 }
 
 .contenido-textos h3 {
+    margin-left: 15px;
     margin-bottom: 15px;
     color: #fff;
 }
@@ -249,7 +251,8 @@ main .en-esta-web {
     margin-right: 5px;
 }
 
-.contenido-textos p{
+.contenido-textos p {
+    margin-left: 15px;
     padding: 0px 0px 30px 15px;
     font-weight: 300;
     text-align: justify;
