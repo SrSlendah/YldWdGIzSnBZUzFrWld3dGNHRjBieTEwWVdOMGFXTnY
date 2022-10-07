@@ -299,6 +299,7 @@ footer {
 .cards {
     display: flex;
     justify-content: space-evenly;
+    margin-top: 25px
 }
 
     .cards .card {
