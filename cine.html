@@ -13,7 +13,7 @@
 
 <body>
     <header>
-
+        <script src="./js/menu.js"></script>
 
         <section id="menu">
             <div class="menu">
@@ -25,9 +25,30 @@
                         <li><a href="./index">inicio</a></li>
                         <li><a href="./anime">Anime</a></li>
                         <li><a href="./cine">Cine</a></li>
+                        <li><a href="./wikis">Wiki</a></li>
                         <li><a href="./login">Admin</a></li>
                     </ul>
                 </nav>
+            </div>
+            <button class="menu-toggle" onclick="abrir_menu()"><img src="./media/menu.png" alt=""></button>
+        </section>
+
+        <section id="menu-overlay" class="menu-overlay" style="display: none;">
+            <div id="menu-overlay">
+                <div class="contenido-overlay">
+                    <a href="./index"><img src="./media/logo.png" alt="logo" class="menu-ov-logo"></a>
+                  <hr style="margin-top:15px;margin-bottom:-15px;">
+                  <nav class="menu-ov-nav">
+                      <ul>
+                          <li><a href="./index">inicio</a></li>
+                          <li><a href="./anime">Anime</a></li>
+                          <li><a href="./cine">Cine</a></li>
+                          <li><a href="./wikis">Wiki</a></li>
+                          <li><a href="./login">Admin</a></li>
+                      </ul>
+                  </nav>
+                  <img src="../media/icons/close.png" style="width: 17px; height: 17px; position: absolute; top: 8px; right: 8px;" onclick="cerrar_menu()" title="Cerrar" class="cerrar-overlay">
+                </div>
             </div>
         </section>
 
@@ -50,48 +71,40 @@
 
 
     <main>
-        <section class="list info">
-            <h2 class="titulo"></h2>
-            <div class="cards">
-                <div class="card">
-                    <a href="listas/lista-marvel" , style=" color: #ccc; text-decoration: none"><img src="media/marvel.png" alt="">
-                        <div class="contenido-texto-card">
-                                <h4>Marvel</h4>
-                                <p>
-                                    Esta es la lista de las peliculas y series de Marvel vistas.<br>
-                                </p>
-                            </a>
-                        </div>
-                </div>
-            </div>
 
-            <div class="cards">
-                <div class="card">
-                    <a href="listas/estrenos-marvel" , style=" color: #ccc; text-decoration: none"><img src="media/marvel-soon.png" alt="">
-                        <div class="contenido-texto-card">
-                                <h4>Proximos estrenos de Marvel</h4>
-                                <p>
-                                    Esta es la lista de los proximos estrenos de las peliculas y series de Marvel.<br>
-                                </p>
-                            </a>
-                        </div>
-                </div>
-            </div>
+        <table style="width:20%">
+            <tr>
+                <td class="secciones-img">
+                    <a href="listas/lista-peliculas-series">
+                        <img src="media/small-pato.png" alt="">
+                    </a>
+                </td>
+                <td></td>
+                <td></td>
+                <td class="secciones-img">
+                    <a href="listas/lista-marvel">
+                        <img src="media/marvel.png" alt="">
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <th class="info-title">
+                    <a href="listas/lista-peliculas-series">
+                        Lista de Peliculas y Series
+                    </a>
+                </th>
+                <td></td>
+                <td></td>
+                <th class="info-title">
+                    <a href="listas/lista-marvel">
+                        Lista de Marvel
+                    </a>
+                </th>
+            </tr>
+        </table>
 
-            <div class="cards">
-                <div class="card">
-                    <a href="listas/lista-otros" , style=" color: #ccc; text-decoration: none"><img src="media/pato.png" alt="">
-                        <div class="contenido-texto-card">
-                            <h4>Otros</h4>
-                            <p>Esta es la lista de las peliculas y series vistas.</p>
-                            </a>
-                        </div>
-                </div>
-            </div>
-
-            
-        </section>
     </main>
+
     <footer>
         <div class="contenedor-footer">
             <div class="content-foo">

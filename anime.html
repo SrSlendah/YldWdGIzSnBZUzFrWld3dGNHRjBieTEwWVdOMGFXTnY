@@ -13,7 +13,7 @@
 
 <body>
     <header>
-
+        <script src="./js/menu.js"></script>
 
         <section id="menu">
             <div class="menu">
@@ -25,9 +25,30 @@
                         <li><a href="./index">inicio</a></li>
                         <li><a href="./anime">Anime</a></li>
                         <li><a href="./cine">Cine</a></li>
+                        <li><a href="./wikis">Wiki</a></li>
                         <li><a href="./login">Admin</a></li>
                     </ul>
                 </nav>
+            </div>
+            <button class="menu-toggle" onclick="abrir_menu()"><img src="./media/menu.png" alt=""></button>
+        </section>
+
+        <section id="menu-overlay" class="menu-overlay" style="display: none;">
+            <div id="menu-overlay">
+                <div class="contenido-overlay">
+                    <a href="./index"><img src="./media/logo.png" alt="logo" class="menu-ov-logo"></a>
+                  <hr style="margin-top:15px;margin-bottom:-15px;">
+                  <nav class="menu-ov-nav">
+                      <ul>
+                          <li><a href="./index">inicio</a></li>
+                          <li><a href="./anime">Anime</a></li>
+                          <li><a href="./cine">Cine</a></li>
+                          <li><a href="./wikis">Wiki</a></li>
+                          <li><a href="./login">Admin</a></li>
+                      </ul>
+                  </nav>
+                  <img src="../media/icons/close.png" style="width: 17px; height: 17px; position: absolute; top: 8px; right: 8px;" onclick="cerrar_menu()" title="Cerrar" class="cerrar-overlay">
+                </div>
             </div>
         </section>
 
@@ -50,55 +71,40 @@
 
 
     <main>
-        <section class="list info">
-            <h2 class="titulo"></h2>
-            <div class="cards">
-                <div class="card">
-                    <a href="listas/lista-anime" , style=" color: #ccc; text-decoration: none">
+
+        <table style="width:20%">
+            <tr>
+                <td class="secciones-img">
+                    <a href="listas/lista-anime">
                         <img src="media/anime.png" alt="">
-                        <div class="contenido-texto-card">
-                            <h4>Anime</h4>
-                            <p>
-                                Esta es la lista de los animes vistos.<br>
-                            </p>
                     </a>
-                        </div>
-                </div>
-            </div>
-            
-            <div class="cards" style="margin-top:25px">
-                    <div class="card">
-                        <a href="listas/proximos-estrenos" , style=" color: #ccc; text-decoration: none">
-                            <img src="media/pato.png" alt="">
-                            <div class="contenido-texto-card">
-                                <h4>Próximos Estrenos</h4>
-                                <p>Esta es la lista de los próximos estrenos de anime.</p>
-                        </a>
-                            </div>
-                    </div>
-            </div>
+                </td>
+                <td></td>
+                <td></td>
+                <td class="secciones-img">
+                    <a href="listas/lista-manga">
+                        <img src="media/manga.png" alt="">
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <th class="info-title">
+                    <a href="listas/lista-anime">
+                        Lista de Anime
+                    </a>
+                </th>
+                <td></td>
+                <td></td>
+                <th class="info-title">
+                    <a href="listas/lista-manga">
+                        Lista de Manga
+                    </a>
+                </th>
+            </tr>
+        </table>
 
-            <div class="cards">
-                    <div class="card">
-                        <a href="listas/lista-manga" , style=" color: #ccc; text-decoration: none">
-                            <img src="media/manga.png" alt="">
-                            <div class="contenido-texto-card">
-                                <h4>Manga</h4>
-                                <p>Esta es la lista de los mangas leidos.</p>
-                        </a>
-                            </div>
-                    </div>
-            </div>
-
-
-
-
-
-
-
-
-        </section>
     </main>
+
     <footer>
         <div class="contenedor-footer">
             <div class="content-foo">
