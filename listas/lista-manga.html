@@ -17,20 +17,42 @@
 
     <header>
 
+        <script src="../js/menu.js"></script>
 
         <section id="menu">
-            <div class="menu">
+            <div class="menu-lista">
 
-                <a href="../index"><img src="../media/logo.png" alt="logo" class="logo"></a>
+                <a href="../index"><img src="../media/logo.png" alt="logo" class="logo-listas"></a>
 
                 <nav>
                     <ul>
                         <li><a href="../index">inicio</a></li>
                         <li><a href="../anime">Anime</a></li>
                         <li><a href="../cine">Cine</a></li>
+                        <li><a href="../wikis">Wiki</a></li>
                         <li><a href="../login">Admin</a></li>
                     </ul>
                 </nav>
+            </div>
+            <button class="menu-lista-toggle" onclick="abrir_menu()"><img src="../media/menu.png" alt=""></button>
+        </section>
+
+        <section id="menu-overlay" class="menu-overlay" style="display: none;">
+            <div id="menu-overlay">
+                <div class="contenido-overlay">
+                    <a href="../index"><img src="../media/logo.png" alt="logo" class="menu-ov-logo"></a>
+                  <hr style="margin-top:15px;margin-bottom:-15px;">
+                  <nav class="menu-ov-nav">
+                      <ul>
+                          <li><a href="../index">inicio</a></li>
+                          <li><a href="../anime">Anime</a></li>
+                          <li><a href="../cine">Cine</a></li>
+                          <li><a href="../wikis">Wiki</a></li>
+                          <li><a href="../login">Admin</a></li>
+                      </ul>
+                  </nav>
+                  <img src="../media/icons/close.png" style="width: 17px; height: 17px; position: absolute; top: 8px; right: 8px;" onclick="cerrar_menu()" title="Cerrar" class="cerrar-overlay">
+                </div>
             </div>
         </section>
 
@@ -51,41 +73,82 @@
 
     </header>
     <main>
-        <section class="img-list">
-            <div class="contenedor">
-                <h2 class="titulo"></h2>
+        <div class="search-container" style="margin-bottom: 10px;">
+          <input type="text" id="search-input" placeholder="Buscar en la lista de manga...">
+          <ul id="autocomplete-list" style="display: none;"></ul>
+        </div>
+      
+        <script src="../js/search-manga.js"></script>
 
-                <a href="../anime"><h4 align="center">[ Volver atrás ]</h4></a>
+        <section class="lista">
 
-                <input type="text" name="buscador" id="buscador" placeholder="Buscar...">
-
-                <div class="galeria-port">
-                    <div class="imagen-port" id="articulo">
-                        <a href="../lista-manga/nanatsu">
-                            <img src="../media/manga/nanatsu.png" alt="">
-                            <div class="hover-galeria">
-                                <p>
-                                    <b>Nanatsu no Taizai</b><br><br>
-
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="imagen-port" id="articulo">
-                        <img src="../media/nada.png" alt="">
-                    </div>
-                    <div class="imagen-port" id="articulo">
-                        <img src="../media/nada.png" alt="">
-                    </div>
-                    <div class="imagen-port" id="articulo">
-                        <img src="../media/nada.png" alt="">
-                    </div>
-                </div>
+            <div class="list-elemento">
+                <a href="../lista-manga/boku-no-hero-academia">
+                    <div class="list-imagen"><img src="../media/manga/boku-no-hero-academia.png"></div>
+                    <div class="list-titulo">Boku no Hero Academia</div>
+                </a>
             </div>
+            
+            <div class="list-elemento">
+                <a href="../lista-manga/chainsaw-man">
+                    <div class="list-imagen"><img src="../media/manga/chainsaw-man.png"></div>
+                    <div class="list-titulo">Chainsaw Man</div>
+                </a>
+            </div>
+            
+            <div class="list-elemento">
+                <a href="../lista-manga/genshin-impact">
+                    <div class="list-imagen"><img src="../media/manga/genshin-impact_prologo.png"></div>
+                    <div class="list-titulo">Genshin Impact</div>
+                </a>
+            </div>
+            
+            <div class="list-elemento">
+                <a href="../lista-manga/jojos-bizarre-adventure">
+                    <div class="list-imagen"><img src="../media/manga/jojos-bizarre-adventure-part-1-phantom-blood.png"></div>
+                    <div class="list-titulo">JoJo's Bizarre Adventure</div>
+                </a>
+            </div>
+            
+            <div class="list-elemento">
+                <a href="../lista-manga/jujutsu-kaisen">
+                    <div class="list-imagen"><img src="../media/manga/jujutsu-kaisen.png"></div>
+                    <div class="list-titulo">Jujutsu Kaisen</div>
+                </a>
+            </div>
+            
+            <div class="list-elemento">
+                <a href="../lista-manga/made-in-abyss">
+                    <div class="list-imagen"><img src="../media/manga/made-in-abyss.png"></div>
+                    <div class="list-titulo">Made in Abyss</div>
+                </a>
+            </div>
+            
+            <div class="list-elemento">
+                <a href="../lista-manga/nanatsu-no-taizai">
+                    <div class="list-imagen"><img src="../media/manga/nanatsu-no-taizai.png"></div>
+                    <div class="list-titulo">Nanatsu no Taizai</div>
+                </a>
+            </div>
+            
+            <div class="list-elemento">
+                <a href="../lista-manga/one-piece">
+                    <div class="list-imagen"><img src="../media/manga/one-piece.png"></div>
+                    <div class="list-titulo">One Piece</div>
+                </a>
+            </div>
+            
+            <div class="list-elemento">
+                <a href="../lista-manga/solo-leveling">
+                    <div class="list-imagen"><img src="../media/manga/solo-leveling.png"></div>
+                    <div class="list-titulo">Solo Leveling</div>
+                </a>
+            </div>
+
         </section>
 
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="../js/buscador.js"></script>
         <script src="../js/ir-arriba.js"></script>
 
     </main>
